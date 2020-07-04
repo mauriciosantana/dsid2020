@@ -2,6 +2,12 @@
 
 
 {% block content %}
-<h1>home</h1>
+<h1>All Turismo</h1>
+{% for turismo in object_list %}
+    <ul>
+        <li>Nome da Cidade: {{ turismo.nome_cidade }}</li>
+        <li>date: {{ turismo.date }}</li>
+    </ul>
+{% endfor %}
 
 {% endblock %}

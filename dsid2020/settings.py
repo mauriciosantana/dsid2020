@@ -21,7 +21,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # local
     'turismo.apps.TurismoConfig',
+    'api.apps.ApiConfig',
+    
+    # 3rd party
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
