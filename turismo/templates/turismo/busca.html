@@ -9,11 +9,11 @@
 <br>
 {% endif %}
 
-<h1>Log in</h1>
+<h1>Busca Cidade Aeropo</h1>
 
-<form method="POST" action="{% url 'busca_cidade_aeroporto' %}">
+<form method="POST" action="{% url 'busca' %}">
 {% csrf_token %}
-Username:
+Cidade:
 <br>
 <input type="text" name="cidade">
 <br>
