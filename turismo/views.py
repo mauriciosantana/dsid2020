@@ -4,10 +4,17 @@ from django.views.generic import ListView
 from .models import Turismo
 
 
-def home(request):
-	return render(request, 'turismo/home.html')
-
-
 class TurismoListView(ListView):
     model = Turismo
-    template_name = 'home.html'
+    template_name = 'turismo/home.html'
+
+def login(request):
+	if request.method == 'POST':
+		#user = auth.authenticate(username=request.POST['username'], password=request.POST['password'])
+		if user is not None:
+			#auth.login(request, user)
+			return redirect('home')
+		else:
+			 return render(request, 'accounts/login.html', {'error': 'username or password is incorrect.'})
+	else:
+		return render(request, 'accounts/login.html')
