@@ -8,11 +8,20 @@ class TurismoListView(ListView):
     model = Turismo
     template_name = 'turismo/home.html'
 
-def busca(request):
+def hotel(request):
 	if request.method == 'POST':
 		if user is not None:
 			return redirect('home')
 		else:
-			 return render(request, 'turismo/busca.html', {'error': 'username or password is incorrect.'})
+			 return render(request, 'turismo/hotel.html', {'error': 'username or password is incorrect.'})
 	else:
-		return render(request, 'turismo/busca.html')
+		return render(request, 'turismo/hotel.html')
+
+def voo(request):
+	if request.method == 'POST':
+		if user is not None:
+			return redirect('home')
+		else:
+			 return render(request, 'turismo/voo.html', {'error': 'username or password is incorrect.'})
+	else:
+		return render(request, 'turismo/voo.html')

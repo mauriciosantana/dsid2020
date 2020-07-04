@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% if error %}
+{{ error }}
+<br>
+<br>
+{% endif %}
+
+<h1>Busca Voo</h1>
+
+<form method="POST" action="{% url 'voo' %}">
+{% csrf_token %}
+Cidade de origen:
+<br>
+<input type="text" name="cidade_origen">
+<br>
+Cidade de chegada:
+<br>
+<input type="text" name="cidade_chegada">
+<br>
+Data de voo:
+<br>
+<input type="date" name="check-in">
+<br>
+<br>
+<input class="btn btn-primary" type="submit" value="Busca voo">
+</form>
+
+{% endblock %}

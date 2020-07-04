@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% if error %}
+{{ error }}
+<br>
+<br>
+{% endif %}
+
+<h1>Busca Hotel</h1>
+
+<form method="POST" action="{% url 'hotel' %}">
+{% csrf_token %}
+Cidade:
+<br>
+<input type="text" name="cidade">
+<br>
+Pais:
+<br>
+<input type="text" name="pais">
+<br>
+Quantidade de quartos:
+<br>
+<input type="text" name="quantidade_quartos">
+<br>
+Quantidade de noites:
+<br>
+<input type="text" name="quantidade_quartos">
+<br>
+Data de check-in:
+<br>
+<input type="date" name="check-in">
+<br>
+<br>
+<input class="btn btn-primary" type="submit" value="Busca hotel">
+</form>
+
+{% endblock %}
