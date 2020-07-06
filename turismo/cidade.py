@@ -6,7 +6,6 @@ def procuraIdCidade(cidade):
     cur=con.cursor()
     conn = http.client.HTTPSConnection("tripadvisor1.p.rapidapi.com")
 
-#cidade = "londres "
     cidade = cidade.replace(" ","%20")
     cidade = cidade.replace("á","%25C3%25A1")
     cidade = cidade.replace("ã","%25C3%25A3")

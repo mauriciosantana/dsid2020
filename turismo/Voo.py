@@ -3,7 +3,7 @@ import psycopg2
 
 
 def buscaCidadeAeroporto(cidade):
-#cidade = "londres"
+
     cidade = cidade.replace(" ","%20")
     cidade = cidade.replace("á","%25C3%25A1")
     cidade = cidade.replace("ã","%25C3%25A3")
