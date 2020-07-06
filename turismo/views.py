@@ -12,10 +12,10 @@ class TurismoListView(ListView):
 
 def busca_hotel(request):
 	if request.method == 'POST':
-		print(hotel.achaHotel(request.POST.get('cidade'), request.POST.get('adultos'),request.POST.get('noites'), 
-			request.POST.get('quartos'), request.POST.get('checkin'), request.POST.get('pais') ))
-	
-		#return redirect('home')
+		print(hotel.achaHotel(request.POST.get('cidade'), request.POST.get('adultos'),
+			request.POST.get('noites'), request.POST.get('quartos'), request.POST.get('checkin'), 
+			request.POST.get('pais') ))
+		return redirect('turismo/home.html')
 
 	else:
 		return render(request, 'turismo/hotel.html')

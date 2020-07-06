@@ -7,6 +7,6 @@ from . import views
 urlpatterns = [
     path('', TurismoListView.as_view(), name='home'),
 
-    path('hotel', views.busca_hotel, name='busca_hotel'),
-    path('voo', views.busca_voo, name='busca_voo'),
+    path('hotel/', views.busca_hotel, name='busca_hotel'),
+    path('voo/', views.busca_voo, name='busca_voo'),
 ]
