@@ -1,11 +1,17 @@
 from rest_framework import generics
 
-from turismo.models import Turismo
-from .serializers import TurismoSerializer
+from turismo.models import Turismo, Hotel, Voo
+from .serializers import TurismoSerializer, HotelSerializer, VooSerializer
 
 
 class TurismoAPIView(generics.ListAPIView):
-
-	# em vez de objects.all(), devemos criar uma funcao que retorna so as cidades procurada?
     queryset = Turismo.objects.all()
     serializer_class = TurismoSerializer
+
+class HotelAPIView(generics.ListAPIView):
+	queryset = Hotel.objects.all()
+	serializer_class = HotelSerializer
+
+class VooAPIView(generics.ListAPIView):
+	queryset = Voo.objects.all()
+	serializer_class = VooSerializer

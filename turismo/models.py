@@ -1,3 +1,4 @@
+from jsonfield import JSONField
 from django.db import models
 
 class Turismo(models.Model):
@@ -9,3 +10,15 @@ class Turismo(models.Model):
 
 	def date_pretty(self):
 		return self.pub_date.strftime('%b %e %Y')
+
+class Hotel(models.Model):
+	fields = JSONField(blank=True, null=True)
+
+	def __str__(self):
+		return self.fields
+
+class Voo(models.Model):
+	fields = JSONField(blank=True, null=True)
+
+	def __str__(self):
+		return self.fields

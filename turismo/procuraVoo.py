@@ -36,6 +36,7 @@ def buscaVoos(cidade_saida,pais_saida,cidade_entrada,pais_entrada,data):
 
     res = conn.getresponse()
     data = res.read()
+
     Resposta = json.loads(data)
     NomeCompanhia = 'a'
     NomeEntrada= 'a'
