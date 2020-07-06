@@ -1,0 +1,9 @@
+cidade_entrada = str.lower(cidade_entrada)
+    cidade_saida = str.lower(cidade_saida)
+    pais_saida = str.lower(pais_saida)
+    pais_entrada = str.lower(pais_entrada)
+    data = str.lower(data)
+    idsaida = ""
+    identrada = ""
+    idsaida = str.lower(idsaida)
+    identrada = str.lower(identrada)

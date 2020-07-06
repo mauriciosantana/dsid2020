@@ -3,11 +3,7 @@ import json
 from . import procuraCodCid
 
 def achaHotel(cidade,adultos,noites,quartos,checkin,pais):
-#codcidade= "303631"
-#adultos = "2"
-#noites = "2"
-#quartos= "1"
-#checkin = "2020-07-10"
+
     codcidade = procuraCodCid.recebeCidade(cidade,pais)
     conn = http.client.HTTPSConnection("tripadvisor1.p.rapidapi.com")
     URL ="/hotels/list?offset=0&currency=BRL&limit=30&order=asc&lang=pt-BR&sort=recommended&location_id="+ codcidade+"&adults="+adultos+"&checkin="+checkin+"&rooms="+quartos+"&nights="+noites

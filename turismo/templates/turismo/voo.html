@@ -13,17 +13,25 @@
 
 <form method="POST" action="{% url 'busca_voo' %}">
 {% csrf_token %}
-Cidade de origen:
+Cidade de saida:
 <br>
-<input type="text" name="cidade_origen">
+<input type="text" name="cidade_saida">
 <br>
-Cidade de chegada:
+Cidade de entrada:
 <br>
-<input type="text" name="cidade_chegada">
+<input type="text" name="cidade_entrada">
+<br>
+Pais de saida: 
+<br>
+<input type="text" name="pais_saida">
+<br>
+Pais de entrada:
+<br>
+<input type="text" name="pais_entrada">
 <br>
 Data de voo (AAAA-MM-DD):
 <br>
-<input type="text" name="check-in">
+<input type="text" name="data">
 <br>
 <br>
 <input class="btn btn-primary" type="submit" value="Busca voo">

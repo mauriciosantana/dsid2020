@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from .models import Turismo
 
-from . import hotel
+from . import hotel, procuraVoo
 
 
 class TurismoListView(ListView):
@@ -20,12 +20,16 @@ def busca_hotel(request):
 	else:
 		return render(request, 'turismo/hotel.html')
 
+# como funciona isto
+
 def busca_voo(request):
-	print()
-	#if request.method == 'POST':
-	#	if user is not None:
-	#		return redirect('home')
-	#	else:
-	#		 return render(request, 'turismo/voo.html', {'error': 'username or password is incorrect.'})
-	#else:
-	#	return render(request, 'turismo/voo.html')
+
+	if request.method == 'POST':
+		print(procuraVoo.buscaVoos(request.POST.get('cidade_saida'), request.POST.get('pais_saida'),
+			request.POST.get('cidade_entrada'), request.POST.get('pais_entrada'), 
+			request.POST.get('data')))
+# vai reiniciar		
+		return redirect('turismo/home.html')
+
+	else:
+		return render(request, 'turismo/voo.html')
