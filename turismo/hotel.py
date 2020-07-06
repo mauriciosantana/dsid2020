@@ -29,6 +29,6 @@ def achaHotel(cidade,adultos,noites,quartos,checkin,pais):
              b['hotel'].append({'nome':nome,'nota':nota,'preco':preco})
         except:
              pass
-    python2json = json.dumps(b)
+    python2json = json.dumps(b,ensure_ascii=False)
     return python2json
 

@@ -5,10 +5,8 @@ from .models import Turismo, Hotel, Voo
 
 from . import hotel, procuraVoo
 
-
-class TurismoListView(ListView):
-    model = Turismo
-    template_name = 'turismo/home.html'
+def base(request):
+	return render(request, 'base.html')
 
 def busca_hotel(request):
 	if request.method == 'POST':

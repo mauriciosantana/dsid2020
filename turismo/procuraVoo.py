@@ -58,5 +58,5 @@ def buscaVoos(cidade_saida,pais_saida,cidade_entrada,pais_entrada,data):
     datavoo = identrada1 = Resposta['Quotes'][0]['OutboundLeg']['DepartureDate']
     jason = {'voo':[]}
     jason['voo'].append({'Origem':NomeSaida,'Destino':NomeEntrada,'Companhia Aerea':NomeCompanhia,'Preco':precoapagar,'Data':datavoo})
-    python2json = json.dumps(jason)
+    python2json = json.dumps(jason,ensure_ascii=False)
     return python2json
